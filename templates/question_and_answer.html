@@ -1,0 +1,12 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for question_and_answer in question_and_answer %}
+            {{question_and_answer.category_name}}
+            {{question_and_answer.question}}
+            {{question_and_answer.answer}}
+        {% endfor %}
+    </body>
+</html>

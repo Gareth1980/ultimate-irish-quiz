@@ -1,12 +1,25 @@
 import os
-from flask import Flask
+from flask import Flask, render_template, redirect, request, url_for
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId 
+
+from os import path
+if path.exists("env.py"):
+    import env 
+
+MONGO_URI = os.environ.get("MONGO_URI") 
 
 app = Flask(__name__)
+app.config["MONGO_DBNAME"] = 'quiz_questions'
+app.config["MONGO_URI"] = MONGO_URI
 
+
+mongo = PyMongo(app)
 
 @app.route('/')
-def hello():
-    return 'Hello World ...again'
+@app.route('/get_questions')
+def get_questions():
+    return render_template("question_and_answer.html", question_and_answer=mongo.db.question_and_answer.find())
 
 
 if __name__ == '__main__':
