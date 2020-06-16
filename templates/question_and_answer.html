@@ -1,12 +1,22 @@
-<html>
-    <head>
+{% extends 'base.html' %}
+{% block content %}
 
-    </head>
-    <body>
+<ul class="collapsible" data-collapsible="accordion">
         {% for question_and_answer in question_and_answer %}
-            {{question_and_answer.category_name}}
-            {{question_and_answer.question}}
-            {{question_and_answer.answer}}
+        <li>
+            <div class="collapsible-header">
+
+                <div class=" task_header col s9">
+                    <i class="material-icons">expand_more</i><strong>{{question_and_answer.category_name}}</strong> - {{question_and_answer.question}}
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <span>
+                    {{question_and_answer.answer}}
+                </span>
+            </div>
+        </li>
         {% endfor %}
-    </body>
-</html>
+    </ul>
+
+{% endblock %}

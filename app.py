@@ -21,6 +21,10 @@ mongo = PyMongo(app)
 def get_questions():
     return render_template("question_and_answer.html", question_and_answer=mongo.db.question_and_answer.find())
 
+@app.route('/add_question')
+def add_question():
+    return render_template('addquestion.html',
+                           categories=mongo.db.categories.find())
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

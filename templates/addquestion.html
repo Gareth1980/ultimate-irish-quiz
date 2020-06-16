@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+{% block content %}
+<h3>Add a Question</h3>
+<div class="row">
+    <form action="" method="POST" class="col s12">
+        <div class="row">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">poll</i>
+                    <select id="category" name="category_name">
+                  <option value="" disabled selected>Choose Category</option>
+                  {% for cat in categories %}
+                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                  {% endfor %}
+                </select>
+                    <label>Question Category</label>
+                </div>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input id="new_question" name="new_question" type="text">
+                <label for="icon_prefix">Question</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input id="new_answer" name="new_answer" type="text">
+                <label for="icon_prefix">Answer</label>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
