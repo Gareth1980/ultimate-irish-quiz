@@ -23,8 +23,7 @@ def get_questions():
 
 @app.route('/add_question')
 def add_question():
-    return render_template('addquestion.html',
-                           categories=mongo.db.categories.find())
+    return render_template('addquestion.html', categories=mongo.db.categories.find())
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
