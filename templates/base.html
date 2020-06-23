@@ -1,29 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ultimate Irish Quiz</title>
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
     <!--style.css-->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="{{url_for('get_questions')}}" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+              ><i class="material-icons">menu</i></a
+            >
+            <ul class="right hide-on-med-and-down">
+              <li><a href="{{url_for('get_questions')}}">Home</a></li>
+              <li><a href="{{url_for('add_question')}}">Add Question</a></li>
+              <li><a href="#Shop">Shop</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="{{url_for('get_questions')}}">Home</a></li>
+          <li><a href="{{url_for('add_question')}}">Add Question</a></li>
+          <li><a href="#Shop">Shop</a></li>
+        </ul>
+      </div>
+    </header>
+    
     <div class="container">
-        {% block content %}
-        {% endblock %} 
+      {% block content %} {% endblock %}
     </div>
-<!--JavaScript at end of body for optimized loading-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script type="text/javascript">
-        $(document).ready(function() {
-            $('.collapsible').collapsible();
-            $('select').formSelect();
-        });
+
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Contact Us</h5>
+                <p class="grey-text text-lighten-4">For any feedback, suggestions or questions, please click below.</p>
+                <a href="#" class="waves-effect waves-light btn-small"><i class="material-icons left">contact_mail</i>Contact Us</a>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Social Links</h5>
+                    <a target="_blank" href="https://www.facebook.com">
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span>
+        </a>
+        <a target="_blank" href="https://twitter.com">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span>
+        </a>
+        <a target="_blank" href="https://www.instagram.com">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span class="sr-only">Instagram</span>
+        </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2020 Gareth Buckley Web Design
+            </div>
+          </div>
+        </footer>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".collapsible").collapsible();
+        $("select").formSelect();
+        $(".sidenav").sidenav();
+      });
     </script>
-</body>
+  </body>
 </html>
