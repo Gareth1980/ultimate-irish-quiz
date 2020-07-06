@@ -15,7 +15,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
 
     <!--style.css-->
     <link
@@ -26,64 +31,122 @@
   </head>
   <body>
     <header>
-      <div class="navbar-fixed">
-        <nav>
-          <div class="nav-wrapper">
-            <a href="{{url_for('get_questions')}}" class="brand-logo">Logo</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-              ><i class="material-icons">menu</i></a
-            >
-            <ul class="right hide-on-med-and-down">
-              <li><a href="{{url_for('get_questions')}}">Home</a></li>
-              <li><a href="{{url_for('add_question')}}">Add Question</a></li>
-              <li><a href="#Shop">Shop</a></li>
-            </ul>
-          </div>
-        </nav>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="{{url_for('get_questions')}}" class="brand-logo"
+            >Ultimate Irish Quiz</a
+          >
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul class="right hide-on-med-and-down">
+            <li><a href="{{url_for('get_questions')}}">Home</a></li>
+            <li><a href="{{url_for('add_question')}}">Add Question</a></li>
+            <li><a href="#">Shop</a></li>
+          </ul>
+        </div>
+      </nav>
 
-        <ul class="sidenav" id="mobile-demo">
-          <li><a href="{{url_for('get_questions')}}">Home</a></li>
-          <li><a href="{{url_for('add_question')}}">Add Question</a></li>
-          <li><a href="#Shop">Shop</a></li>
-        </ul>
-      </div>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="{{url_for('get_questions')}}">Home</a></li>
+        <li><a href="{{url_for('add_question')}}">Add Question</a></li>
+        <li><a href="#">Shop</a></li>
+      </ul>
     </header>
-    
+
     <div class="container">
       {% block content %} {% endblock %}
     </div>
 
-    <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Contact Us</h5>
-                <p class="grey-text text-lighten-4">For any feedback, suggestions or questions, please click below.</p>
-                <a href="#" class="waves-effect waves-light btn-small"><i class="material-icons left">contact_mail</i>Contact Us</a>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Social Links</h5>
-                    <a target="_blank" href="https://www.facebook.com">
-            <i class="fab fa-facebook" aria-hidden="true"></i>
-            <span class="sr-only">Facebook</span>
-        </a>
-        <a target="_blank" href="https://twitter.com">
-            <i class="fab fa-twitter" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span>
-        </a>
-        <a target="_blank" href="https://www.instagram.com">
-            <i class="fab fa-instagram" aria-hidden="true"></i>
-            <span class="sr-only">Instagram</span>
-        </a>
-              </div>
+    <footer class="page-footer center-align">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Contact Us</h5>
+            <p class="grey-text text-lighten-4">
+              For any feedback, suggestions or questions, please click below.
+            </p>
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger" href="#modalContactForm"
+              ><i class="material-icons left">contact_mail</i>Contact Us</a
+            >
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text center-align">Social Links</h5>
+            <div>
+              <a target="_blank" href="https://www.facebook.com">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+                <span class="sr-only">Facebook</span>
+              </a>
+              <a target="_blank" href="https://twitter.com">
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+                <span class="sr-only">Twitter</span>
+              </a>
+              <a target="_blank" href="https://www.instagram.com">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <span class="sr-only">Instagram</span>
+              </a>
             </div>
           </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2020 Gareth Buckley Web Design
-            </div>
-          </div>
-        </footer>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="center-align container">
+          © 2020 Gareth Buckley Web Design
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal Structure -->
+   <div id="modalContactForm" class="modal">
+   <form class="signup-form" onsubmit="return sendMail(this);">
+    <div class="modal-content">
+      <h4>Contact Us</h4>
+      
+      <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">person</i>
+          <input name="firstname" id="fname" type="text" class="autocomplete" required>
+          <label for="autocomplete-input" for="fname">Your name</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input class="autocomplete" type="email" name="emailaddress" id="email" required>
+          <label for="autocomplete-input">Your email</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">textsms</i>
+          <input type="text" id="message" name="query" class="autocomplete" required>
+          <label for="autocomplete-input">Your message</label>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    
+      <div class="modal-footer center-align">
+        <a class="waves-effect waves-light btn modal-trigger" href="#"
+              ><input class="join-button" type="Reset" value="Clear"></a>
+        <a class="waves-effect waves-light btn modal-trigger" href="#"
+              ><input class="join-button" type="submit" value="Submit"></a>
+      </div>
+    </form>
+  </div>
+
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -92,6 +155,7 @@
         $(".collapsible").collapsible();
         $("select").formSelect();
         $(".sidenav").sidenav();
+        $(".modal").modal();
       });
     </script>
   </body>

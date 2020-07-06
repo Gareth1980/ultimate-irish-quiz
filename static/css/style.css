@@ -9,3 +9,10 @@
 .question_header {
   margin-top: 5px;
 }
+
+/* background image */
+body{
+    background-image: url('static/css/images/background.jpg') fixed no-repeat;
+}
+
+/* background image */
