@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="keywords" content="Quiz, table quiz, Irish, Ireland, Questions, Answers, lockdown, fun, things to do, family, friends">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ultimate Irish Quiz</title>
     <!--Import Google Icon Font-->
@@ -23,42 +24,48 @@
     />
 
     <!--style.css-->
-    <link
-      rel="stylesheet"
-      href="{{url_for('static', filename='css/style.css')}}"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
+<!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_mbN8jbI1AxItdGWnmIM8d");
+   })();
+</script>
   </head>
   <body>
     <header>
-      <nav>
+    <div class="navbar-fixed">
+      <nav class="light-green darken-4">
         <div class="nav-wrapper">
           <a href="{{url_for('get_questions')}}" class="brand-logo"
-            >Ultimate Irish Quiz</a
-          >
+            ><img class="logo" src="static/images/logo.png" alt="Ultimate Irish Quiz"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"
             ><i class="material-icons">menu</i></a
           >
           <ul class="right hide-on-med-and-down">
             <li><a href="{{url_for('get_questions')}}">Home</a></li>
             <li><a href="{{url_for('add_question')}}">Add Question</a></li>
-            <li><a href="#">Shop</a></li>
+            <li><a href="{{url_for('get_shop')}}">Shop</a></li>
           </ul>
         </div>
       </nav>
+    </div>
 
       <ul class="sidenav" id="mobile-demo">
         <li><a href="{{url_for('get_questions')}}">Home</a></li>
         <li><a href="{{url_for('add_question')}}">Add Question</a></li>
-        <li><a href="#">Shop</a></li>
+        <li><a href="{{url_for('get_shop')}}">Shop</a></li>
       </ul>
     </header>
-
+    
+<div class="bg">
     <div class="container">
       {% block content %} {% endblock %}
     </div>
+</div>
 
-    <footer class="page-footer center-align">
+    <footer class="page-footer center-align light-green darken-4">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
@@ -67,30 +74,38 @@
               For any feedback, suggestions or questions, please click below.
             </p>
             <!-- Modal Trigger -->
-            <a class="waves-effect waves-light btn modal-trigger" href="#modalContactForm"
+            <a class="waves-effect waves-light btn modal-trigger orange accent-3 hoverable" href="#modalContactForm"
               ><i class="material-icons left">contact_mail</i>Contact Us</a
             >
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text center-align">Social Links</h5>
+            <h5 class="center-align">Social Links</h5>
             <div>
+            <ul class="list-inline social-links center-align">
+                <li class="list-inline-item">
               <a target="_blank" href="https://www.facebook.com">
-                <i class="fab fa-facebook" aria-hidden="true"></i>
+                <i class="fab fa-facebook hoverable" aria-hidden="true"></i>
                 <span class="sr-only">Facebook</span>
               </a>
+                </li>
+                <li class="list-inline-item">
               <a target="_blank" href="https://twitter.com">
-                <i class="fab fa-twitter" aria-hidden="true"></i>
+                <i class="fab fa-twitter hoverable" aria-hidden="true"></i>
                 <span class="sr-only">Twitter</span>
               </a>
+                </li>
+                <li class="list-inline-item">
               <a target="_blank" href="https://www.instagram.com">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <i class="fab fa-instagram hoverable" aria-hidden="true"></i>
                 <span class="sr-only">Instagram</span>
               </a>
+              <li>
+            </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer-copyright">
+      <div class="footer-copyright green darken-4">
         <div class="center-align container">
           © 2020 Gareth Buckley Web Design
         </div>
@@ -98,51 +113,54 @@
     </footer>
 
     <!-- Modal Structure -->
-   <div id="modalContactForm" class="modal">
+   <div id="modalContactForm" class="modal container">
    <form class="signup-form" onsubmit="return sendMail(this);">
     <div class="modal-content">
-      <h4>Contact Us</h4>
-      
+      <h4 class="center-align">Contact Us</h4>
+    
       <div class="row">
     <div class="col s12">
-      <div class="row">
+      <div class="row modal-rows">
         <div class="input-field col s12">
           <i class="material-icons prefix">person</i>
-          <input name="firstname" id="fname" type="text" class="autocomplete" required>
-          <label for="autocomplete-input" for="fname">Your name</label>
+          <input name="firstname" id="name" type="text" class="autocomplete" required>
+          <label for="autocomplete-input name">Your name</label>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col s12">
-      <div class="row">
+      <div class="row modal-rows">
         <div class="input-field col s12">
           <i class="material-icons prefix">email</i>
           <input class="autocomplete" type="email" name="emailaddress" id="email" required>
-          <label for="autocomplete-input">Your email</label>
+          <label for="autocomplete-input email">Your email</label>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col s12">
-      <div class="row">
+      <div class="row modal-rows">
         <div class="input-field col s12">
           <i class="material-icons prefix">textsms</i>
           <input type="text" id="message" name="query" class="autocomplete" required>
-          <label for="autocomplete-input">Your message</label>
+          <label for="autocomplete-input message">Your message</label>
         </div>
       </div>
     </div>
   </div>
     </div>
     
-      <div class="modal-footer center-align">
-        <a class="waves-effect waves-light btn modal-trigger" href="#"
-              ><input class="join-button" type="Reset" value="Clear"></a>
-        <a class="waves-effect waves-light btn modal-trigger" href="#"
-              ><input class="join-button" type="submit" value="Submit"></a>
+      <div class="modal-footer">
+        <button class="btn waves-effect waves-light" href="#" type="Reset" value="clear" name="action">Clear
+    <i class="material-icons right">clear_all</i>
+        </button>
+        <button class="btn waves-effect waves-light" href="#" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+   <button class="btn waves-effect waves-light modal-close"><i class="material-icons">close</i></button>
       </div>
     </form>
   </div>
@@ -158,5 +176,7 @@
         $(".modal").modal();
       });
     </script>
+
+    <script src="static/js/sendEmail.js"></script>
   </body>
 </html>

@@ -62,6 +62,10 @@ def delete_question(question_and_answer_id):
         {'_id': ObjectId(question_and_answer_id)})
     return redirect(url_for('get_questions'))
 
+@app.route('/shop')   
+def get_shop():
+    return render_template("shop.html")    
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
