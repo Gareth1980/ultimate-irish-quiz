@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #c5e1a5;
+}
+
+.img-border {
+    padding: 0;
+    border: solid 3px #1b5e20;
+    border-radius: 2em;
+    margin: 2em 0em;
+}
+
+/* Style Line Break */
+hr {
+    display: block;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-style: inset;
+    border-width: 3px;
+    border-color: #1b5e20;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
 
 .btn_small {
   height: 24px;
@@ -9,21 +32,87 @@
   padding: 0;
 }
 
+ul.list {
+  list-style-type: square;
+  font-size: 1.2em;
+}
+
+.shop-link{
+    color: #fff;
+    background-color: #558b2f;
+    padding: 0.2em;
+    border-radius: 0.2em;
+    transition: 0.8s;
+    margin: 0.5em 0.5em;
+}
+
+.special-offers-link{
+    color: #ff9100;
+}
+
+.shop-link:hover {
+    cursor: pointer;
+    background-color:  #33691e;
+}
+
+.glow{
+    font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 0.4em #fff, 0 0 0.5em #fff, 0 0 0.6em #33691e , 0 0 0.7em #33691e , 0 0 0.8em #33691e , 0 0 0.9em #33691e , 0 0 1em #33691e ;
+  }
+  
+  to {
+    text-shadow: 0 0 0.8em #fff, 0 0 0.6em #9ccc65, 0 0 0.7em #9ccc65, 0 0 0.8em #9ccc65, 0 0 0.9em #9ccc65, 0 0 1em #9ccc65, 0 0 1.1em #9ccc65;
+  }
+}
+
+a.waves-effect.waves-light.btn.btn_small.red {
+    transition: 0.8s !important;
+}
+
+a.waves-effect.waves-light.btn.btn_small.red:hover {
+    cursor: pointer;
+    background-color: #e53935 !important;
+}
+
+a.waves-effect.waves-light.btn.btn_small.orange {
+    transition: 0.8s !important;
+}
+
+a.waves-effect.waves-light.btn.btn_small.orange:hover {
+    cursor: pointer;
+    background-color: #ff9100 !important;
+}
+
+button.btn.waves-effect.waves-light {
+    transition: 0.8s !important;
+    background-color: #558b2f !important;
+}
+
+button.btn.waves-effect.waves-light:hover {
+    cursor: pointer;
+    background-color: #33691e !important;
+}
+
 .question_header {
   margin-top: 5px;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #c5e1a5;
-}
-
 .dropdown-content li>span {
-    color: darkgreen;
+    color: #1b5e20;
 }
  
 .card .card-action {
-    padding: 0.5rm 1em;
+    padding: 0.5em 1em;
 }
 
 .card .card-content {
@@ -49,6 +138,14 @@ body{
     margin-bottom: 0.5rem;
 }
 
+a.waves-effect.waves-light.btn.modal-trigger.orange.accent-2.hoverable {
+    transition: 0.5s;
+}
+
+a.waves-effect.waves-light.btn.modal-trigger.orange.accent-2.hoverable:hover {
+    background-color: #ff9100 !important;
+}
+
 .social-links {
     text-align: center;
     padding-top: 10px;
@@ -58,11 +155,16 @@ body{
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    padding: 10px;
+    padding: 8px;
     font-size: 2em;
-    line-height: 1em;
+    line-height: 1.5em;
     text-align: center;
-    color: orange;
+    color: #ffab40;
+    transition: 0.5s;
+}
+
+.social-links li a i:hover{
+    color: #ff9100;
 }
 
 .list-inline-item {

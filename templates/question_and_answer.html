@@ -3,12 +3,12 @@
 <div class="row">
 	<div class="col s12">
 		<div class="center-align heading-homepage">
-			<img src="../static/images/quiz.jpg" alt="Quiz Heading" class="responsive">
+			<img src="../static/images/quiz.jpg" alt="Quiz Heading" class="responsive img-border z-depth-4">
 			<div class="heading-paragraph">
-				<p>
-					Welcome to the <strong>Ultimate Irish Quiz</strong> where you can...
-				</p>
-				<ul>
+				<h5>
+					Welcome to the <b>Ultimate Irish Quiz</b> where you can...
+				</h5>
+				<ul class="list">
 					<li>
 						Test your knowledge on all things Irish
 					</li>
@@ -18,12 +18,23 @@
 					<li>
 						Add/edit/delete questions and answers
 					</li>
+                </ul>    
+					<h5>
+						Or if you are thinking of becoming a quizmaster, why not visit our<br><br> <a class="shop-link hoverable" href="{{url_for('get_shop')}}">ONLINE SHOP</a><br><br>where you can...
+                    </h5>    
+                    <ul class="list">
 					<li>
-						Or if your feeling lazy, why not visit our shop including
-						<b>SPECIAL OFFERS</b> and purchase our specially designed quizzes
-						for all age groups.
+						Purchase ready made quizzes for under 12s
 					</li>
-				</ul>
+					<li>
+						Purchase ready made quizzes for teenagers
+					</li>
+					<li>
+						Purchase ready made quizzes for adults 
+					</li>
+                </ul>    
+					<p>And once in the online shop, check out the...</p><strong class="glow"><a class="special-offers-link" href="{{url_for('get_shop')}}">  SPECIAL OFFERS!!!</a></strong>
+				
 			</div>
 		</div>
 	</div>
@@ -48,7 +59,7 @@
 						famous people to festivals. To test your general knowledge click below...</p>
 				</div>
 				<div class="card-action waves-effect">
-					<button href="/#" class="btn waves-effect waves-light green darken-4 hoverable">General Knowledge</button>
+					<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">General Knowledge</button>
 				</div>
 			</div>
 		</div>
@@ -64,7 +75,7 @@
 						</p>
 					</div>
 					<div class="card-action waves-effect">
-						<button href="/#" class="btn waves-effect waves-light green darken-4 hoverable">Geography</button>
+						<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">Geography</button>
 					</div>
 				</div>
 			</div>
@@ -80,7 +91,7 @@
 								knowledge click below...</p>
 						</div>
 						<div class="card-action waves-effect">
-							<button href="/#" class="btn waves-effect waves-light green darken-4 hoverable">History</button>
+							<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">History</button>
 						</div>
 					</div>
 				</div>
@@ -96,7 +107,7 @@
 									below...</p>
 							</div>
 							<div class="card-action waves-effect">
-								<button href="/#" class="btn waves-effect waves-light green darken-4 hoverable">Music</button>
+								<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">Music</button>
 							</div>
 						</div>
 					</div>
@@ -112,7 +123,7 @@
 										knowledge click below...</p>
 								</div>
 								<div class="card-action waves-effect">
-									<button href="/#" class="btn waves-effect waves-light green darken-4 hoverable">Politics</button>
+									<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">Politics</button>
 								</div>
 							</div>
 						</div>
@@ -129,7 +140,7 @@
 											click below...</p>
 									</div>
 									<div class="card-action waves-effect">
-										<button href="/#" class="btn waves-effect waves-light green darken-4 hoverable">Sports</button>
+										<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">Sports</button>
 									</div>
 								</div>
 							</div>
@@ -146,7 +157,7 @@
 												knowledge click below...</p>
 										</div>
 										<div class="card-action waves-effect">
-											<button href="/#" class="btn waves-effect waves-light green darken-4 hoverable">TV and Film</button>
+											<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">TV and Film</button>
 										</div>
 									</div>
 								</div>
@@ -167,13 +178,13 @@
 										<div class="collapsible-header">
 											<div class="col s3">
 												<a href="{{url_for('delete_question', question_and_answer_id=question_and_answer._id)}}"
-													class="waves-effect waves-light btn btn_small red hoverable">Delete</a>
+													class="waves-effect waves-light btn btn_small red lighten-1 hoverable">Delete</a>
 												<a href="{{url_for('edit_question', question_and_answer_id=question_and_answer._id)}}"
-													class="waves-effect waves-light btn btn_small orange accent-3 hoverable">Edit</a>
+													class="waves-effect waves-light btn btn_small orange accent-2 hoverable">Edit</a>
 											</div>
 
 											<div class="question_header col s9">
-												<strong>{{question_and_answer.category_name}}</strong> -
+												<b>{{question_and_answer.category_name}}</b> -
 												{{question_and_answer.question}}
 											</div>
 											<i class="large material-icons">expand_more</i>
@@ -181,7 +192,7 @@
 
 										<div class="collapsible-body">
 											<div class="col s3">
-												<strong>Answer:</strong>
+												<b>Answer:</b>
 											</div>
 											<div class="col s9">
 												{{question_and_answer.answer}}
