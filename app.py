@@ -62,9 +62,59 @@ def delete_question(question_and_answer_id):
         {'_id': ObjectId(question_and_answer_id)})
     return redirect(url_for('get_questions'))
 
-@app.route('/shop')   
+# Route for Shop Link
+@app.route('/shop')
 def get_shop():
-    return render_template("shop.html")    
+    return render_template("shop.html")
+
+# Route for Under Construction Link
+@app.route('/under_construction')
+def get_under_construction():
+    return render_template("under_construction.html")
+
+# Route for General Knowledge category
+@app.route('/get_general_knowledge')
+def get_general_knowledge():
+    return render_template("categories.html",
+                           categories=mongo.db.question_and_answer.find({'category_name': 'General Knowledge'}))
+
+# Route for Geography category
+
+
+@app.route('/get_geography')
+def get_geography():
+    return render_template("categories.html",
+                           categories=mongo.db.question_and_answer.find({'category_name': 'Geography'}))
+
+# Route for History category
+@app.route('/get_history')
+def get_history():
+    return render_template("categories.html",
+                           categories=mongo.db.question_and_answer.find({'category_name': 'History'}))
+
+# Route for Music category
+@app.route('/get_music')
+def get_music():
+    return render_template("categories.html",
+                           categories=mongo.db.question_and_answer.find({'category_name': 'Music'}))
+
+# Route for Politics category
+@app.route('/get_politics')
+def get_politics():
+    return render_template("categories.html",
+                           categories=mongo.db.question_and_answer.find({'category_name': 'Politics'}))
+
+# Route for Sports category
+@app.route('/get_sport')
+def get_sport():
+    return render_template("categories.html",
+                           categories=mongo.db.question_and_answer.find({'category_name': 'Sport'}))
+
+# Route for TV and Film category
+@app.route('/get_tv_and_film')
+def get_tv_and_film():
+    return render_template("categories.html",
+                           categories=mongo.db.question_and_answer.find({'category_name': 'TV and Film'}))
 
 
 if __name__ == '__main__':

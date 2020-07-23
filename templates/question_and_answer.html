@@ -33,7 +33,7 @@
 						Purchase ready made quizzes for adults 
 					</li>
                 </ul>    
-					<p>And once in the online shop, check out the...</p><strong class="glow"><a class="special-offers-link" href="{{url_for('get_shop')}}">  SPECIAL OFFERS!!!</a></strong>
+					<p class="info">And once in the online shop, check out the...</p><strong class="glow"><a class="special-offers-link" href="{{url_for('get_shop')}}">  SPECIAL OFFERS!!!</a></strong>
 				
 			</div>
 		</div>
@@ -59,7 +59,7 @@
 						famous people to festivals. To test your general knowledge click below...</p>
 				</div>
 				<div class="card-action waves-effect">
-					<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">General Knowledge</button>
+					<a href="{{url_for('get_general_knowledge')}}" class="btn waves-effect waves-light green darken-3 hoverable">General Knowledge</a>
 				</div>
 			</div>
 		</div>
@@ -75,7 +75,7 @@
 						</p>
 					</div>
 					<div class="card-action waves-effect">
-						<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">Geography</button>
+						<a href="{{url_for('get_geography')}}" class="btn waves-effect waves-light green darken-3 hoverable">Geography</a>
 					</div>
 				</div>
 			</div>
@@ -91,7 +91,7 @@
 								knowledge click below...</p>
 						</div>
 						<div class="card-action waves-effect">
-							<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">History</button>
+							<a href="{{ url_for('get_history') }}" class="btn waves-effect waves-light green darken-3 hoverable">History</a>
 						</div>
 					</div>
 				</div>
@@ -107,7 +107,7 @@
 									below...</p>
 							</div>
 							<div class="card-action waves-effect">
-								<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">Music</button>
+								<a href="{{url_for('get_music')}}" class="btn waves-effect waves-light green darken-3 hoverable">Music</a>
 							</div>
 						</div>
 					</div>
@@ -123,7 +123,7 @@
 										knowledge click below...</p>
 								</div>
 								<div class="card-action waves-effect">
-									<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">Politics</button>
+									<a href="{{url_for('get_politics')}}" class="btn waves-effect waves-light green darken-3 hoverable">Politics</a>
 								</div>
 							</div>
 						</div>
@@ -140,7 +140,7 @@
 											click below...</p>
 									</div>
 									<div class="card-action waves-effect">
-										<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">Sports</button>
+										<a href="{{url_for('get_sport')}}" class="btn waves-effect waves-light green darken-3 hoverable">Sports</a>
 									</div>
 								</div>
 							</div>
@@ -157,7 +157,7 @@
 												knowledge click below...</p>
 										</div>
 										<div class="card-action waves-effect">
-											<button href="/#" class="btn waves-effect waves-light green darken-3 hoverable">TV and Film</button>
+											<a href="{{url_for('get_tv_and_film')}}" class="btn waves-effect waves-light green darken-3 hoverable">TV and Film</a>
 										</div>
 									</div>
 								</div>
@@ -169,6 +169,9 @@
 								<div>
 									<h4>All Questions</h4>
 								</div>
+                                <div class="info">
+                                Just click <i class="material-icons">expand_more</i> to reveal the answer
+                                </div>
 							</div>
 
 							<div class="row">
@@ -202,4 +205,6 @@
 									{% endfor %}
 								</ul>
 							</div>
+
+
 							{% endblock %}

@@ -5,6 +5,13 @@ body{
     background-color: #c5e1a5;
 }
 
+.collapsible-header {
+    background-color: #dcedc8 !important;
+}
+
+.collapsible-body {
+    background-color: #f1f8e9  !important;
+}
 .img-border {
     padding: 0;
     border: solid 3px #1b5e20;
@@ -35,6 +42,10 @@ hr {
 ul.list {
   list-style-type: square;
   font-size: 1.2em;
+}
+
+.info {
+    font-size: 1.2em;
 }
 
 .shop-link{
