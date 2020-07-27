@@ -16,25 +16,25 @@ app.config["MONGO_URI"] = MONGO_URI
 
 mongo = PyMongo(app)
 
-
+# Route for Home Page
 @app.route('/')
 @app.route('/get_questions')
 def get_questions():
     return render_template("question_and_answer.html", question_and_answer=mongo.db.question_and_answer.find())
 
-
+# Route to Add a Question
 @app.route('/add_question')
 def add_question():
     return render_template('addquestion.html', categories=mongo.db.categories.find())
 
-
+# Route to Insert Question
 @app.route('/insert_question', methods=['POST'])
 def insert_question():
     question_and_answer = mongo.db.question_and_answer
     question_and_answer.insert_one(request.form.to_dict())
     return redirect(url_for('get_questions'))
 
-
+# Route to Edit Question
 @app.route('/edit_question/<question_and_answer_id>')
 def edit_question(question_and_answer_id):
     the_question = mongo.db.question_and_answer.find_one(
@@ -43,7 +43,7 @@ def edit_question(question_and_answer_id):
     return render_template('editquestion.html', question_and_answer=the_question,
                            categories=all_categories)
 
-
+# Route to Update Question 
 @app.route('/update_question/<question_and_answer_id>', methods=['POST'])
 def update_question(question_and_answer_id):
     question_and_answer = mongo.db.question_and_answer
@@ -55,7 +55,7 @@ def update_question(question_and_answer_id):
     })
     return redirect(url_for('get_questions'))
 
-
+# Route to Delete Question
 @app.route('/delete_question/<question_and_answer_id>')
 def delete_question(question_and_answer_id):
     mongo.db.question_and_answer.remove(
