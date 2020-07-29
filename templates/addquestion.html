@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
-<h3>Add New Question</h3>
+<h3 class="headings">Add New Question</h3>
+<!-- Form to add new question -->
 <div class="row">
   <form action="{{ url_for('insert_question') }}" method="POST" class="col s12">
     <div class="row">

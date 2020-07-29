@@ -1,10 +1,19 @@
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
+/* Style body */
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #c5e1a5;
 }
 
+/* Style headings */
+.headings {
+  margin-top: 10px; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Style questions and answers section */
 .collapsible-header {
     background-color: #dcedc8 !important;
 }
@@ -12,11 +21,18 @@ body{
 .collapsible-body {
     background-color: #f1f8e9  !important;
 }
+
+/* Style images */
 .img-border {
     padding: 0;
     border: solid 3px #1b5e20;
     border-radius: 2em;
     margin: 2em 0em;
+}
+
+.responsive {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* Style Line Break */
@@ -31,6 +47,7 @@ hr {
     margin-top: 4em;
 }
 
+/* Style buttons */
 .btn_small {
   height: 24px;
   width: 60px;
@@ -39,6 +56,7 @@ hr {
   padding: 0;
 }
 
+/* Style information on home page */
 ul.list {
   list-style-type: square;
   font-size: 1.2em;
@@ -48,6 +66,7 @@ ul.list {
     font-size: 1.2em;
 }
 
+/* Style shop link */
 .shop-link{
     color: #fff;
     background-color: #558b2f;
@@ -57,18 +76,17 @@ ul.list {
     margin: 0.5em 0.5em;
 }
 
-.special-offers-link{
-    color: #ff9100;
-}
-
-.price{
-    text-decoration: line-through;
-}
 .shop-link:hover {
     cursor: pointer;
     background-color:  #33691e;
 }
 
+/* Style the line break in shop page */
+.price{
+    text-decoration: line-through;
+}
+
+/* Style special offers glow */
 .glow{
     font-weight: bold;
   font-size: 1.5em;
@@ -77,6 +95,10 @@ ul.list {
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
+}
+
+.special-offers-link{
+    color: #ff9100;
 }
 
 @-webkit-keyframes glow {
@@ -89,6 +111,7 @@ ul.list {
   }
 }
 
+/* Style button links */
 a.waves-effect.waves-light.btn.btn_small.red {
     transition: 0.8s !important;
 }
@@ -122,41 +145,9 @@ a.btn.waves-effect.waves-light.green.darken-4.hoverable {
     background-color: #558b2f !important;
 }
 
-
 a.btn.waves-effect.waves-light.green.darken-4.hoverable:hover {
     cursor: pointer;
     background-color: #33691e !important;
-}
-
-.question_header {
-  margin-top: 5px;
-}
-
-.dropdown-content li>span {
-    color: #1b5e20;
-}
- 
-.card .card-action {
-    padding: 0.5em 1em;
-}
-
-.card .card-content {
-    padding: 0.7em;
-}
-
-.responsive {
-  max-width: 100%;
-  height: 100%;
-}
-
-.modal-rows{
-    margin-bottom: 0px;
-}
-
-.input-field {
-    position: relative;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
 }
 
 a.waves-effect.waves-light.btn.modal-trigger.orange.accent-2.hoverable {
@@ -167,9 +158,40 @@ a.waves-effect.waves-light.btn.modal-trigger.orange.accent-2.hoverable:hover {
     background-color: #ff9100 !important;
 }
 
+/* Style card dropdown list */
+.dropdown-content li>span {
+    color: #1b5e20;
+}
+ 
+/* Style cards */
+.card .card-action {
+    padding: 0.5em 1em;
+}
+
+.card .card-content {
+    padding: 0.7em;
+}
+
+.quiz-rounds{
+    text-align: left;
+}
+
+/* Style modal contact form */
+.modal-rows{
+    margin-bottom: 0;
+}
+
+.input-field {
+    position: relative;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Style social links in footer */
 .social-links {
     text-align: center;
-    padding-top: 10px;
+    padding-top: 0;
+    margin: 0;
 }
 
 .social-links li a i {
@@ -193,7 +215,5 @@ a.waves-effect.waves-light.btn.modal-trigger.orange.accent-2.hoverable:hover {
     padding: 5px;
 }
 
-.quiz-rounds{
-    text-align: left;
 
-}
+

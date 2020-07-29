@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-
+<!-- Home page introduction -->
 <div class="row">
 	<div class="col s12">
 		<div class="center-align heading-homepage">
@@ -43,11 +43,11 @@
 <hr id="all_categories">
 
 <div class="center-align heading-homepage">
-	<div>
+	<div class="headings">
 		<h4>Choose Category Quiz Questions</h4>
 	</div>
 </div>
-
+<!-- Cards with links to each category -->
 <div class="row categories-row center-align">
 	<div class="col xl4 l6 m6 s12">
 		<div class="card medium hoverable">
@@ -166,14 +166,14 @@
 							<hr id="all_questions">
 
 							<div class="center-align heading-homepage">
-								<div>
+								<div class="headings">
 									<h4>All Questions</h4>
 								</div>
                                 <div class="info">
                                 Just click <i class="material-icons">expand_more</i> to reveal the answer
                                 </div>
 							</div>
-
+<!-- A list of all questions for all categories where you can delete, edit and reveal answers -->
 							<div class="row">
 								<ul class="collapsible" data-collapsible="accordion">
 									{% for question_and_answer in question_and_answer %}

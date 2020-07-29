@@ -2,13 +2,13 @@
 
 <div class="center-align heading-homepage">
   <div>
-    <h4>All Questions</h4>
+    <h4 class="headings">All Questions</h4>
   </div>
 </div>
-
+<!-- Question and answers for each category -->
 <div class="row">
   <ul class="collapsible" data-collapsible="accordion">
-    {% for question_and_answer in question_and_answer %}
+    {% for category in question_and_answer %}
     <li>
       <div class="collapsible-header">
         <div class="col s3">

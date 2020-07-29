@@ -34,6 +34,7 @@
 </script>
   </head>
   <body>
+  <!-- Navbar -->
     <header>
     <div class="navbar-fixed">
       <nav class="light-green darken-4">
@@ -62,18 +63,18 @@
         <li><a href="{{url_for('get_shop')}}">Shop</a></li>
       </ul>
     </header>
-    
+<!-- Content for other pages -->
 <div class="bg">
     <div class="container">
       {% block content %} {% endblock %}
     </div>
 </div>
-
+<!-- Footer -->
     <footer class="page-footer center-align light-green darken-4">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Contact Us</h5>
+            <h5 class="white-text headings">Contact Us</h5>
             <p class="grey-text text-lighten-4">
               For any feedback, suggestions or questions, please click below.
             </p>
@@ -83,7 +84,7 @@
             >
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="center-align">Social Links</h5>
+            <h5 class="center-align headings">Social Links</h5>
             <div>
             <ul class="list-inline social-links center-align">
                 <li class="list-inline-item">
@@ -116,7 +117,7 @@
       </div>
     </footer>
 
-    <!-- Modal Structure -->
+    <!-- Modal for Contact Us Form -->
    <div id="modalContactForm" class="modal container">
    <form class="signup-form" onsubmit="return sendMail(this);">
     <div class="modal-content">
@@ -169,7 +170,7 @@
     </form>
   </div>
 
-    <!--JavaScript at end of body for optimized loading-->
+    <!--JavaScript at bottom of base.html for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript">

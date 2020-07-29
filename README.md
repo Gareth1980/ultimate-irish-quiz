@@ -1,5 +1,5 @@
 # Ultimate Irish Quiz
-<img src="../static/images/logo.png" alt="Ultimate Irish Quiz Logo" width="350px">
+<img src="static/images/logo.png" alt="Ultimate Irish Quiz Logo" background-color="green" width="350px">
 
 # Contents
 1. <a href="#Demo">Demo</a>
@@ -21,7 +21,10 @@
 1. <a href="#Disclaimer">Disclaimer</a>
 
 <h2>Third Milestone Project: Data Centric Development - Code Institute</h2>
-<p></p>
+<p>This website is based on using MongoDB as a database to store questions 
+and answers relating to Ireland which are categorised. I use CRUD operations - 
+create questions, read questions, update questions and delete questions.
+</p>
 
 <h1 id="Demo">1. Demo</h1>
 <p>A live demo can be found <a target="_blank" href="https://ultimate-irish-quiz.herokuapp.com/">here.</a></p>
@@ -32,29 +35,35 @@
 <p>I contacted 3 of my friends that have a keen interest in quizzes and all things Irish.</p>
 
 <h3>Damien and Julie from Kingsbury</h3>
-<p>..........</p>
+<p>As a user, we want to test my knowledge on all things Irish and don't want to see the answer 
+before we have a guess and then be able to click to reveal the answer. We would like to be able 
+to add questions that are not there already, delete questions that are incorrect and update 
+questions that need updating.
+</p>
 
-<h3>Susan and John from Ballina</h3>
-<p>..........</p>
+<h3>John from Ballina</h3>
+<p>As a user, I want to get easy access to loads of Irish based questions and be able to view 
+them by category.</p>
 
-<h3>Darren and Eimear from Melbourne</h3>
-<p>...........</p>
+<h3>Darren from Melbourne</h3>
+<p>As a user and quizmaster in local Irish Club, I want to be able to purchase specially 
+designed quizzes based on Irish questions so that I don't have to waste time researching 
+dozens of questions.</p>
 
 <h2 id="Strategy">Strategy</h2>
-<p>The overall strategy for visitors to this website is...  My goal in the design of this website is to make it easy to navigate and use, easy on the eye.
-As soon as you open the website you will see an image of Quiz Time which I find is eye catching.... 
+<p>The overall strategy for visitors to this website is for them to read Irish questions and answers by category 
+or all questions together, let them able to update them, delete them and create them. My goal in the design of 
+this website is to make it easy to navigate and use and easy on the eye.
+As soon as you open the website you will see an image of Quiz Time in the Navbar which I find is eye catching.... 
 I designed the logo on <a target="_blank" href="https://www.freelogodesign.org/">www.freelogodesign.org</a> and 
 chose a subtle green, white and orange as these are the colours of Irish flag. 
-I used <a target="_blank" href="https://color.adobe.com/create/color-wheel/">www.color.adobe.com/create/color-wheel</a>
-and selected the logo image and this website picked out distinct colours from the image and used only three of 
-these colours consistently throughout the website so as not to overpower the website with too many colours. The 
-colours selected were XXX. For the Contact Us section, I used 
-<a target="_blank" href="https://www.rapidtables.com/convert/color/hex-to-rgb.html">www.rapidtables.com</a> to convert hex #718C0F 
-to RGB colour in order to use transparency to see the background image. I have used <a target="_blank" 
-href="https://fonts.google.com/">Google Fonts</a> to select the 2 different fonts used in the website. I chose 
-xxx font for the 
-main headings as it compliments the Logo font. I also chose xxx font for the main scripting as it is a good pairing
-with xxx font as per the google font website.</p>
+I used <a target="_blank" href="https://materializecss.com/color.html/"> materialize colours</a>
+and selected mainly different shades of green and orange for the basis of the website pages.
+I selected these colours consistently throughout the website so as not to overpower the website with too many colours.
+I have used <a target="_blank" href="https://fonts.google.com/">Google Fonts</a> to select the 2 different fonts used 
+in the website. I chose Montserrat font for the 
+main headings as it compliments the Logo font. I also chose Roboto font for the main scripting as it is a good pairing
+with Montserrat font as per the google font website.</p>
 
 <h2 id="Wireframes">Wireframes</h2>
 
@@ -73,7 +82,7 @@ with xxx font as per the google font website.</p>
 <h2>Navbar</h2>
 I have used a responsive navigation bar using materialize. On the left is the logo. 
 For mobile devices a hamburger menu on the top-left expands a menu with links to 
-the different section on the website. On larger devices the expanded menu is shown 
+the different pages on the website. On larger devices the expanded menu is shown 
 instead. I feel this will be easy for users to quickly navigate the website. This 
 navbar will be fixed for easy navigation.
 
@@ -87,12 +96,14 @@ navbar will be fixed for easy navigation.
 <h2>Contact Form and EmailJS</h2>
 Included a contact form with 3 required fields (name, email and query 
 that when completed correctly will send an email to myself and an auto reply email
-to the sender using <a target="_blank" href="https://www.emailjs.com/">EmailJS</a>. If one or more of
-the fields are not completed correctly, website visitor will be advised.
+to the sender using <a target="_blank" href="https://www.emailjs.com/">EmailJS</a>. 
+If one or more of the fields are not completed correctly, website visitor will be advised and
+will not be able to sned until all fields completed.
 
 
 <h2 id="FeaturesLeft">Possible Future Features</h2>
-...................
+Possibly add a Log In/Sign Up option. Allow members only to Edit or Delete questions. 
+Add a chat function for the members to communicate to each other.
 
 <h1 id="Technologies">4. Technologies</h1>
 <h2>Language Used</h2>
@@ -100,10 +111,11 @@ the fields are not completed correctly, website visitor will be advised.
 * <a target="_blank" href="https://en.wikipedia.org/wiki/HTML">HTML</a>
 * <a target="_blank" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>
 * <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a>
+* <a target="_blank" href="https://www.python.org/">Python</a>
 
 <h2>Frameworks, Libraries & Programs Used</h2>
 
-* <a target="_blank" href="https://materializecss.com/">Bootstrap 4.4.1</a>
+* <a target="_blank" href="https://materializecss.com/">Materialize</a>
     * **Materialize** was used to assist with the responsiveness and styling of the navbar, the cards, the colours, the shadows, the buttons, the modal and the footer.
 * <a target="_blank" href="https://fonts.google.com/">Google Fonts</a>
     * **Google fonts** were used to import the XXX and XXX font into the style.css file which are the 2 fonts used in the project.
@@ -127,16 +139,14 @@ the fields are not completed correctly, website visitor will be advised.
 
 ### UX Stories
 **Damien and Julie from Kingsbury** wanted the following:<br>
-XXX - included<br>
-XXX - included
+Collapsible question and answer - included<br>
+CRUD - included
  
-**Susan and john from Ballina** wanted the following:<br>
-XXX - included
+**John from Ballina** wanted the following:<br>
+View questions by category - included
 
-**Darren and Eimear from melbourne** wanted the following:<br>
-XXX - included<br>
-XXX - included<br>
-XXX - included
+**Darren from melbourne** wanted the following:<br>
+Online shop to purchase ready made quizzes (wip) - included
 
 ### Validation
 I used validator websites to test the following:
@@ -157,7 +167,7 @@ I used validator websites to test the following:
     </a>
 </p>
 
-When I right clicked inspect, XX warnings appeared. Minor warnings all related to image of map markers with lettering - "was loaded over HTTPS, but requested an insecure image".
+When I right clicked inspect, XX warnings appeared.
 
 ### Responsiveness
 <p>I tested the responsiveness of the website on google chrome by using <a target="_blank" href="http://www.responsinator.com/">www.responsinator.com</a>. I also used the 
@@ -168,21 +178,21 @@ responsiveness i.e. Galaxy S5, iPhone 5/SE/6/7/8, iPhone 6/7/8 plus, iPhone X, i
 All links tested and working correctly. 
 
 ### Website and Social Media links
-All links for websites and social media in About section, top 4 recommendations section and footer section all working correctly
+All links   and social media in About section,  footer section all working correctly
 on all devices and browsers and opened under a new tab leaving Donegal Town Destination tab open.
   
 ### Contact Us
 Contact Us working correctly. I tried to submit an empty form and verified that an error message about the 
 required fields appears. Tried to submit the form with an invalid email address without an @ and verified 
 that a relevant error message appears. Tried to submit the form with only 1 field correctly entered, then 
-2 fields correctly and then 3 fields correctly entered  and verified that a relevant error message appears
-for the remaining fileds left blank.
+2 fields correctly and verified that a relevant error message appears
+for the remaining field(s) left blank.
 
 ### EmailJS
 When form fully completed correctly, I have checked that an email will be sent to my email address with all information
 given and also an automatic email will be sent the the email address entered in the form to say "Hi 'fname' Thank you
-for completing the contact form in the Destination Donegal Town website. We will reply to you within 24 hours. 
-Kinds Regards, Destination Donegal Town."
+for completing the contact form in the Ultimate Irish Quiz website. We will reply to you within 24 hours. 
+Kinds Regards, Ultimate Irish Quiz."
 
 ### Browser Compatibility
 . | Appearance | Responsiveness | Comments |
@@ -236,7 +246,7 @@ The XXX main websites I used to help me with the coding in the various sections 
 with the image carousel and read more button
 
 I would like to acknowledge the Code Institute Learning Management System on helping 
-me learn all about HTML, CSS, Javascript, Python, MongoDB. I would also like to thank the team in Tutor Support ..............
+me learn all about HTML, CSS, Javascript, Python, MongoDB. I would also like to thank the team in Tutor Support.
 
 <h1 id="Disclaimer">8. Disclaimer</h1>
 The content and images on this website are for educational purposes only.
