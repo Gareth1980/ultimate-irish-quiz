@@ -43,7 +43,7 @@ def edit_question(question_and_answer_id):
     return render_template('editquestion.html', question_and_answer=the_question,
                            categories=all_categories)
 
-# Route to Update Question 
+# Route to Update Question
 @app.route('/update_question/<question_and_answer_id>', methods=['POST'])
 def update_question(question_and_answer_id):
     question_and_answer = mongo.db.question_and_answer
@@ -75,47 +75,58 @@ def get_under_construction():
 # Route for General Knowledge category
 @app.route('/get_general_knowledge')
 def get_general_knowledge():
+    question_and_answer = list(mongo.db.question_and_answer.find(
+        {'category_name': 'General Knowledge'}))
     return render_template("categories.html",
-                           category=mongo.db.question_and_answer.find({'category_name': 'General Knowledge'}))
+                           question_and_answer=question_and_answer)
 
 # Route for Geography category
-
-
 @app.route('/get_geography')
 def get_geography():
+    question_and_answer = list(
+        mongo.db.question_and_answer.find({'category_name': 'Geography'}))
     return render_template("categories.html",
-                           category=mongo.db.question_and_answer.find({'category_name': 'Geography'}))
+                           question_and_answer=question_and_answer)
 
 # Route for History category
 @app.route('/get_history')
 def get_history():
+    question_and_answer = list(
+        mongo.db.question_and_answer.find({'category_name': 'History'}))
     return render_template("categories.html",
-                           category=mongo.db.question_and_answer.find({'category_name': 'History'}))
+                           question_and_answer=question_and_answer)
 
 # Route for Music category
 @app.route('/get_music')
 def get_music():
+    question_and_answer = list(
+        mongo.db.question_and_answer.find({'category_name': 'Music'}))
     return render_template("categories.html",
-                           category=mongo.db.question_and_answer.find({'category_name': 'Music'}))
+                           question_and_answer=question_and_answer)
 
 # Route for Politics category
 @app.route('/get_politics')
 def get_politics():
+    question_and_answer = list(
+        mongo.db.question_and_answer.find({'category_name': 'Politics'}))
     return render_template("categories.html",
-                           category=mongo.db.question_and_answer.find({'category_name': 'Politics'}))
+                           question_and_answer=question_and_answer)
 
 # Route for Sports category
 @app.route('/get_sport')
 def get_sport():
+    question_and_answer = list(
+        mongo.db.question_and_answer.find({'category_name': 'Sport'}))
     return render_template("categories.html",
-                           category=mongo.db.question_and_answer.find({'category_name': 'Sport'}))
+                           question_and_answer=question_and_answer)
 
 # Route for TV and Film category
 @app.route('/get_tv_and_film')
 def get_tv_and_film():
+    question_and_answer = list(mongo.db.question_and_answer.find({
+                               'category_name': 'TV and Film'}))
     return render_template("categories.html",
-                           category=mongo.db.question_and_answer.find({'category_name': 'TV and Film'}))
-
+                           question_and_answer=question_and_answer)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

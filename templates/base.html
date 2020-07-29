@@ -44,6 +44,7 @@
     </script>
   </head>
   <body>
+  <div class="wrapper">
     <!-- Navbar -->
     <header>
       <div class="navbar-fixed">
@@ -52,7 +53,7 @@
             <a href="{{url_for('get_questions')}}" class="brand-logo"
               ><img
                 class="logo"
-                src="static/images/logo.png"
+                src="{{url_for('static', filename='images/logo.png')}}"
                 alt="Ultimate Irish Quiz"
             /></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"
@@ -60,8 +61,8 @@
             >
             <ul class="right hide-on-med-and-down">
               <li><a href="{{url_for('get_questions')}}">Home</a></li>
-              <li><a href="#all_categories">Choose a Category</a></li>
-              <li><a href="#all_questions">All Questions</a></li>
+              <li><a href="{{ url_for('.get_questions', _anchor='all_categories')}}">Choose a Category</a></li>
+              <li><a href="{{ url_for('.get_questions', _anchor='all_questions')}}">All Questions</a></li>
               <li><a href="{{url_for('add_question')}}">Add Question</a></li>
               <li><a href="{{url_for('get_shop')}}">Shop</a></li>
             </ul>
@@ -71,8 +72,8 @@
 
       <ul class="sidenav" id="mobile-demo">
         <li><a href="{{url_for('get_questions')}}">Home</a></li>
-        <li><a href="#all_categories">Choose a Category</a></li>
-        <li><a href="#all_questions">All Questions</a></li>
+        <li><a href="{{ url_for('.get_questions', _anchor='all_categories') }}">Choose a Category</a></li>
+        <li><a href="{{ url_for('.get_questions', _anchor='all_questions')}}">All Questions</a></li>
         <li><a href="{{url_for('add_question')}}">Add Question</a></li>
         <li><a href="{{url_for('get_shop')}}">Shop</a></li>
       </ul>
@@ -83,6 +84,8 @@
         {% block content %} {% endblock %}
       </div>
     </div>
+    <div class="push"></div>
+  </div>
     <!-- Footer -->
     <footer class="page-footer center-align light-green darken-4">
       <div class="container">

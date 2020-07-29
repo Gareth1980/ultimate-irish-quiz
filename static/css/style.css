@@ -11,6 +11,7 @@ body {
 .headings {
   margin-top: 10px;
   font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 /* Style questions and answers section */
@@ -189,6 +190,14 @@ a.waves-effect.waves-light.btn.modal-trigger.orange.accent-2.hoverable:hover {
   margin-bottom: 0.5rem;
 }
 
+.modal-content {
+    background-color: #dcedc8 !important;
+}
+
+.modal-footer {
+    background-color: #dcedc8 !important;
+}
+
 /* Style social links in footer */
 .social-links {
   text-align: center;
@@ -215,4 +224,18 @@ a.waves-effect.waves-light.btn.modal-trigger.orange.accent-2.hoverable:hover {
 .list-inline-item {
   display: inline-flex;
   padding: 5px;
+}
+
+/* To fix footer at bottom of page for ipads as not enough content on some pages */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+.footer,
+.push {
+  height: 50px;
 }
