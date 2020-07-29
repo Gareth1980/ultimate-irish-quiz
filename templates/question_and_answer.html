@@ -1,210 +1,288 @@
 {% extends 'base.html' %} {% block content %}
 <!-- Home page introduction -->
 <div class="row">
-	<div class="col s12">
-		<div class="center-align heading-homepage">
-			<img src="../static/images/quiz.jpg" alt="Quiz Heading" class="responsive img-border z-depth-4">
-			<div class="heading-paragraph">
-				<h5>
-					Welcome to the <b>Ultimate Irish Quiz</b> where you can...
-				</h5>
-				<ul class="list">
-					<li>
-						Test your knowledge on all things Irish
-					</li>
-					<li>
-						Create your own quiz with friends/family
-					</li>
-					<li>
-						Add/edit/delete questions and answers
-					</li>
-                </ul>    
-					<h5>
-						Or if you are thinking of becoming a quizmaster, why not visit our<br><br> <a class="shop-link hoverable" href="{{url_for('get_shop')}}">ONLINE SHOP</a><br><br>where you can...
-                    </h5>    
-                    <ul class="list">
-					<li>
-						Purchase ready made quizzes for under 12s
-					</li>
-					<li>
-						Purchase ready made quizzes for teenagers
-					</li>
-					<li>
-						Purchase ready made quizzes for adults 
-					</li>
-                </ul>    
-					<p class="info">And once in the online shop, check out the...</p><strong class="glow"><a class="special-offers-link" href="{{url_for('get_shop')}}">  SPECIAL OFFERS!!!</a></strong>
-				
-			</div>
-		</div>
-	</div>
+  <div class="col s12">
+    <div class="center-align heading-homepage">
+      <img
+        src="../static/images/quiz.jpg"
+        alt="Quiz Heading"
+        class="responsive img-border z-depth-4"
+      />
+      <div class="heading-paragraph">
+        <h5>Welcome to the <b>Ultimate Irish Quiz</b> where you can...</h5>
+        <ul class="list">
+          <li>
+            Test your knowledge on all things Irish
+          </li>
+          <li>
+            Create your own quiz with friends/family
+          </li>
+          <li>
+            Add/edit/delete questions and answers
+          </li>
+        </ul>
+        <h5>
+          Or if you are thinking of becoming a quizmaster, why not visit our<br /><br />
+          <a class="shop-link hoverable" href="{{url_for('get_shop')}}"
+            >ONLINE SHOP</a
+          ><br /><br />where you can...
+        </h5>
+        <ul class="list">
+          <li>
+            Purchase ready made quizzes for under 12s
+          </li>
+          <li>
+            Purchase ready made quizzes for teenagers
+          </li>
+          <li>
+            Purchase ready made quizzes for adults
+          </li>
+        </ul>
+        <p class="info">And once in the online shop, check out the...</p>
+        <strong class="glow"
+          ><a class="special-offers-link" href="{{url_for('get_shop')}}">
+            SPECIAL OFFERS!!!</a
+          ></strong
+        >
+      </div>
+    </div>
+  </div>
 </div>
 
-<hr id="all_categories">
+<hr id="all_categories" />
 
 <div class="center-align heading-homepage">
-	<div class="headings">
-		<h4>Choose Category Quiz Questions</h4>
-	</div>
+  <div class="headings">
+    <h4>Choose Category Quiz Questions</h4>
+  </div>
 </div>
 <!-- Cards with links to each category -->
 <div class="row categories-row center-align">
-	<div class="col xl4 l6 m6 s12">
-		<div class="card medium hoverable">
-			<div class="card-image">
-				<img class="general_knowledge-pic" src="../static/images/general_knowledge.jpg" alt="General Knowledge">
-            </div>
-				<div class="card-content">
-					<p>Do you know your Irish general knowledge? Anything from Arts,
-						famous people to festivals. To test your general knowledge click below...</p>
-				</div>
-				<div class="card-action waves-effect">
-					<a href="{{url_for('get_general_knowledge')}}" class="btn waves-effect waves-light green darken-4 hoverable">General Knowledge</a>
-				</div>
-			</div>
-		</div>
+  <div class="col xl4 l6 m6 s12">
+    <div class="card medium hoverable">
+      <div class="card-image">
+        <img
+          class="general_knowledge-pic"
+          src="../static/images/general_knowledge.jpg"
+          alt="General Knowledge"
+        />
+      </div>
+      <div class="card-content">
+        <p>
+          Do you know your Irish general knowledge? Anything from Arts, famous
+          people to festivals. To test your general knowledge click below...
+        </p>
+      </div>
+      <div class="card-action waves-effect">
+        <a
+          href="{{url_for('get_general_knowledge')}}"
+          class="btn waves-effect waves-light green darken-4 hoverable"
+          >General Knowledge</a
+        >
+      </div>
+    </div>
+  </div>
 
-		<div class="col xl4 l6 m6 s12 center-align">
-			<div class="card medium hoverable">
-				<div class="card-image">
-					<img class="geography-pic" src="../static/images/geography.jpg" alt="Geography">
-                </div>
-					<div class="card-content">
-						<p>Do you know your Irish geography? Anything from Irish rivers, lakes,
-							mountains, counties, cities to towns. To test your Irish geography knowledge click below...
-						</p>
-					</div>
-					<div class="card-action waves-effect">
-						<a href="{{url_for('get_geography')}}" class="btn waves-effect waves-light green darken-4 hoverable">Geography</a>
-					</div>
-				</div>
-			</div>
+  <div class="col xl4 l6 m6 s12 center-align">
+    <div class="card medium hoverable">
+      <div class="card-image">
+        <img
+          class="geography-pic"
+          src="../static/images/geography.jpg"
+          alt="Geography"
+        />
+      </div>
+      <div class="card-content">
+        <p>
+          Do you know your Irish geography? Anything from Irish rivers, lakes,
+          mountains, counties, cities to towns. To test your Irish geography
+          knowledge click below...
+        </p>
+      </div>
+      <div class="card-action waves-effect">
+        <a
+          href="{{url_for('get_geography')}}"
+          class="btn waves-effect waves-light green darken-4 hoverable"
+          >Geography</a
+        >
+      </div>
+    </div>
+  </div>
 
-			<div class="col xl4 l6 m6 s12 center-align">
-				<div class="card medium hoverable">
-					<div class="card-image">
-						<img class="history-pic" src="../static/images/history.jpg" alt="History">
-                    </div>
-						<div class="card-content">
-							<p>Do you know your Irish History? Anything from the Vikings, Great Irish Famine,
-								Easter Rising, the Rebellions, to the early settlers. To test your Irish history
-								knowledge click below...</p>
-						</div>
-						<div class="card-action waves-effect">
-							<a href="{{ url_for('get_history') }}" class="btn waves-effect waves-light green darken-4 hoverable">History</a>
-						</div>
-					</div>
-				</div>
+  <div class="col xl4 l6 m6 s12 center-align">
+    <div class="card medium hoverable">
+      <div class="card-image">
+        <img
+          class="history-pic"
+          src="../static/images/history.jpg"
+          alt="History"
+        />
+      </div>
+      <div class="card-content">
+        <p>
+          Do you know your Irish History? Anything from the Vikings, Great Irish
+          Famine, Easter Rising, the Rebellions, to the early settlers. To test
+          your Irish history knowledge click below...
+        </p>
+      </div>
+      <div class="card-action waves-effect">
+        <a
+          href="{{ url_for('get_history') }}"
+          class="btn waves-effect waves-light green darken-4 hoverable"
+          >History</a
+        >
+      </div>
+    </div>
+  </div>
 
-				<div class="col xl4 l6 m6 s12 center-align">
-					<div class="card medium hoverable">
-						<div class="card-image">
-							<img class="music-pic" src="../static/images/music.jpg" alt="Music">
-                        </div>
-							<div class="card-content">
-								<p>Do you know your Irish music? Anything from Sharon Shannon, Christy Moore,
-									U2, to The Wolftones. To test your Irish music knowledge click
-									below...</p>
-							</div>
-							<div class="card-action waves-effect">
-								<a href="{{url_for('get_music')}}" class="btn waves-effect waves-light green darken-4 hoverable">Music</a>
-							</div>
-						</div>
-					</div>
+  <div class="col xl4 l6 m6 s12 center-align">
+    <div class="card medium hoverable">
+      <div class="card-image">
+        <img class="music-pic" src="../static/images/music.jpg" alt="Music" />
+      </div>
+      <div class="card-content">
+        <p>
+          Do you know your Irish music? Anything from Sharon Shannon, Christy
+          Moore, U2, to The Wolftones. To test your Irish music knowledge click
+          below...
+        </p>
+      </div>
+      <div class="card-action waves-effect">
+        <a
+          href="{{url_for('get_music')}}"
+          class="btn waves-effect waves-light green darken-4 hoverable"
+          >Music</a
+        >
+      </div>
+    </div>
+  </div>
 
-					<div class="col xl4 l6 m6 s12 center-align">
-						<div class="card medium hoverable">
-							<div class="card-image">
-								<img class="politics-pic responsive" src="../static/images/politics.jpg" alt="Politics">
-                            </div>
-								<div class="card-content">
-									<p>Do you know your Irish Politics? Anything from Presidents, Political Parties,
-										Douglas Hyde, Michael Collins to Leo Varadkar. To test your Irish Politics
-										knowledge click below...</p>
-								</div>
-								<div class="card-action waves-effect">
-									<a href="{{url_for('get_politics')}}" class="btn waves-effect waves-light green darken-4 hoverable">Politics</a>
-								</div>
-							</div>
-						</div>
+  <div class="col xl4 l6 m6 s12 center-align">
+    <div class="card medium hoverable">
+      <div class="card-image">
+        <img
+          class="politics-pic responsive"
+          src="../static/images/politics.jpg"
+          alt="Politics"
+        />
+      </div>
+      <div class="card-content">
+        <p>
+          Do you know your Irish Politics? Anything from Presidents, Political
+          Parties, Douglas Hyde, Michael Collins to Leo Varadkar. To test your
+          Irish Politics knowledge click below...
+        </p>
+      </div>
+      <div class="card-action waves-effect">
+        <a
+          href="{{url_for('get_politics')}}"
+          class="btn waves-effect waves-light green darken-4 hoverable"
+          >Politics</a
+        >
+      </div>
+    </div>
+  </div>
 
-						<div class="col xl4 l6 m6 s12 center-align">
-							<div class="card medium hoverable">
-								<div class="card-image">
-									<img class="sports-pic responsive" src="../static/images/sports.jpg" alt="Sports">
-                                </div>
-									<div class="card-content">
-										<p>Do you know your Irish Sport? Anything from Gaelic Games, rugby, socder,
-											athletics,
-											Sonia O'Sullivan to Padraig Harrington. To test your Irish Sports knowledge
-											click below...</p>
-									</div>
-									<div class="card-action waves-effect">
-										<a href="{{url_for('get_sport')}}" class="btn waves-effect waves-light green darken-4 hoverable">Sports</a>
-									</div>
-								</div>
-							</div>
+  <div class="col xl4 l6 m6 s12 center-align">
+    <div class="card medium hoverable">
+      <div class="card-image">
+        <img
+          class="sports-pic responsive"
+          src="../static/images/sports.jpg"
+          alt="Sports"
+        />
+      </div>
+      <div class="card-content">
+        <p>
+          Do you know your Irish Sport? Anything from Gaelic Games, rugby,
+          socder, athletics, Sonia O'Sullivan to Padraig Harrington. To test
+          your Irish Sports knowledge click below...
+        </p>
+      </div>
+      <div class="card-action waves-effect">
+        <a
+          href="{{url_for('get_sport')}}"
+          class="btn waves-effect waves-light green darken-4 hoverable"
+          >Sports</a
+        >
+      </div>
+    </div>
+  </div>
 
-							<div class="col xl4 l6 m6 s12 center-align">
-								<div class="card medium hoverable">
-									<div class="card-image">
-										<img class="tv_and_film-pic" src="../static/images/tv_and_film.jpg" alt="TV and Film">
-                                    </div>
-										<div class="card-content">
-											<p>Do you know your Irish TV and Film? Anything from Fair City, My Left
-												Foot, The Field, actors,
-												directors, short films to cartoons. To test your Irish TV and Film
-												knowledge click below...</p>
-										</div>
-										<div class="card-action waves-effect">
-											<a href="{{url_for('get_tv_and_film')}}" class="btn waves-effect waves-light green darken-4 hoverable">TV and Film</a>
-										</div>
-									</div>
-								</div>
-							</div>
+  <div class="col xl4 l6 m6 s12 center-align">
+    <div class="card medium hoverable">
+      <div class="card-image">
+        <img
+          class="tv_and_film-pic"
+          src="../static/images/tv_and_film.jpg"
+          alt="TV and Film"
+        />
+      </div>
+      <div class="card-content">
+        <p>
+          Do you know your Irish TV and Film? Anything from Fair City, My Left
+          Foot, The Field, actors, directors, short films to cartoons. To test
+          your Irish TV and Film knowledge click below...
+        </p>
+      </div>
+      <div class="card-action waves-effect">
+        <a
+          href="{{url_for('get_tv_and_film')}}"
+          class="btn waves-effect waves-light green darken-4 hoverable"
+          >TV and Film</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
 
-							<hr id="all_questions">
+<hr id="all_questions" />
 
-							<div class="center-align heading-homepage">
-								<div class="headings">
-									<h4>All Questions</h4>
-								</div>
-                                <div class="info">
-                                Just click <i class="material-icons">expand_more</i> to reveal the answer
-                                </div>
-							</div>
+<div class="center-align heading-homepage">
+  <div class="headings">
+    <h4>All Questions</h4>
+  </div>
+  <div class="info">
+    Just click <i class="material-icons">expand_more</i> to reveal the answer
+  </div>
+</div>
 <!-- A list of all questions for all categories where you can delete, edit and reveal answers -->
-							<div class="row">
-								<ul class="collapsible" data-collapsible="accordion">
-									{% for question_and_answer in question_and_answer %}
-									<li>
-										<div class="collapsible-header">
-											<div class="col s3">
-												<a href="{{url_for('delete_question', question_and_answer_id=question_and_answer._id)}}"
-													class="waves-effect waves-light btn btn_small red lighten-1 hoverable">Delete</a>
-												<a href="{{url_for('edit_question', question_and_answer_id=question_and_answer._id)}}"
-													class="waves-effect waves-light btn btn_small orange accent-2 hoverable">Edit</a>
-											</div>
+<div class="row">
+  <ul class="collapsible" data-collapsible="accordion">
+    {% for question_and_answer in question_and_answer %}
+    <li>
+      <div class="collapsible-header">
+        <div class="col s3">
+          <a
+            href="{{url_for('delete_question', question_and_answer_id=question_and_answer._id)}}"
+            class="waves-effect waves-light btn btn_small red lighten-1 hoverable"
+            >Delete</a
+          >
+          <a
+            href="{{url_for('edit_question', question_and_answer_id=question_and_answer._id)}}"
+            class="waves-effect waves-light btn btn_small orange accent-2 hoverable"
+            >Edit</a
+          >
+        </div>
 
-											<div class="question_header col s9">
-												<b>{{question_and_answer.category_name}}</b> -
-												{{question_and_answer.question}}
-											</div>
-											<i class="large material-icons">expand_more</i>
-										</div>
+        <div class="question_header col s9">
+          <b>{{question_and_answer.category_name}}</b> -
+          {{question_and_answer.question}}
+        </div>
+        <i class="large material-icons">expand_more</i>
+      </div>
 
-										<div class="collapsible-body">
-											<div class="col s3">
-												<b>Answer:</b>
-											</div>
-											<div class="col s9">
-												{{question_and_answer.answer}}
-											</div>
-										</div>
-									</li>
-									{% endfor %}
-								</ul>
-							</div>
+      <div class="collapsible-body">
+        <div class="col s3">
+          <b>Answer:</b>
+        </div>
+        <div class="col s9">
+          {{question_and_answer.answer}}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 
-
-							{% endblock %}
+{% endblock %}

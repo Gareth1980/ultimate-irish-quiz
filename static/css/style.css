@@ -1,33 +1,33 @@
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
 
 /* Style body */
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #c5e1a5;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #c5e1a5;
 }
 
 /* Style headings */
 .headings {
-  margin-top: 10px; 
-  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Style questions and answers section */
 .collapsible-header {
-    background-color: #dcedc8 !important;
+  background-color: #dcedc8 !important;
 }
 
 .collapsible-body {
-    background-color: #f1f8e9  !important;
+  background-color: #f1f8e9 !important;
 }
 
 /* Style images */
 .img-border {
-    padding: 0;
-    border: solid 3px #1b5e20;
-    border-radius: 2em;
-    margin: 2em 0em;
+  padding: 0;
+  border: solid 3px #1b5e20;
+  border-radius: 2em;
+  margin: 2em 0em;
 }
 
 .responsive {
@@ -37,14 +37,14 @@ body{
 
 /* Style Line Break */
 hr {
-    display: block;
-    margin-left: 15%;
-    margin-right: 15%;
-    border-style: inset;
-    border-width: 3px;
-    border-color: #1b5e20;
-    margin-bottom: 4em;
-    margin-top: 4em;
+  display: block;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-style: inset;
+  border-width: 3px;
+  border-color: #1b5e20;
+  margin-bottom: 4em;
+  margin-top: 4em;
 }
 
 /* Style buttons */
@@ -63,32 +63,32 @@ ul.list {
 }
 
 .info {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 /* Style shop link */
-.shop-link{
-    color: #fff;
-    background-color: #558b2f;
-    padding: 0.2em;
-    border-radius: 0.2em;
-    transition: 0.8s;
-    margin: 0.5em 0.5em;
+.shop-link {
+  color: #fff;
+  background-color: #558b2f;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  transition: 0.8s;
+  margin: 0.5em 0.5em;
 }
 
 .shop-link:hover {
-    cursor: pointer;
-    background-color:  #33691e;
+  cursor: pointer;
+  background-color: #33691e;
 }
 
 /* Style the line break in shop page */
-.price{
-    text-decoration: line-through;
+.price {
+  text-decoration: line-through;
 }
 
 /* Style special offers glow */
-.glow{
-    font-weight: bold;
+.glow {
+  font-weight: bold;
   font-size: 1.5em;
   letter-spacing: 2px;
   text-align: center;
@@ -97,123 +97,122 @@ ul.list {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-.special-offers-link{
-    color: #ff9100;
+.special-offers-link {
+  color: #ff9100;
 }
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 0.4em #fff, 0 0 0.5em #fff, 0 0 0.6em #33691e , 0 0 0.7em #33691e , 0 0 0.8em #33691e , 0 0 0.9em #33691e , 0 0 1em #33691e ;
+    text-shadow: 0 0 0.4em #fff, 0 0 0.5em #fff, 0 0 0.6em #33691e,
+      0 0 0.7em #33691e, 0 0 0.8em #33691e, 0 0 0.9em #33691e, 0 0 1em #33691e;
   }
-  
+
   to {
-    text-shadow: 0 0 0.8em #fff, 0 0 0.6em #9ccc65, 0 0 0.7em #9ccc65, 0 0 0.8em #9ccc65, 0 0 0.9em #9ccc65, 0 0 1em #9ccc65, 0 0 1.1em #9ccc65;
+    text-shadow: 0 0 0.8em #fff, 0 0 0.6em #9ccc65, 0 0 0.7em #9ccc65,
+      0 0 0.8em #9ccc65, 0 0 0.9em #9ccc65, 0 0 1em #9ccc65, 0 0 1.1em #9ccc65;
   }
 }
 
 /* Style button links */
 a.waves-effect.waves-light.btn.btn_small.red {
-    transition: 0.8s !important;
+  transition: 0.8s !important;
 }
 
 a.waves-effect.waves-light.btn.btn_small.red:hover {
-    cursor: pointer;
-    background-color: #e53935 !important;
+  cursor: pointer;
+  background-color: #e53935 !important;
 }
 
 a.waves-effect.waves-light.btn.btn_small.orange {
-    transition: 0.8s !important;
+  transition: 0.8s !important;
 }
 
 a.waves-effect.waves-light.btn.btn_small.orange:hover {
-    cursor: pointer;
-    background-color: #ff9100 !important;
+  cursor: pointer;
+  background-color: #ff9100 !important;
 }
 
 button.btn.waves-effect.waves-light {
-    transition: 0.8s !important;
-    background-color: #558b2f !important;
+  transition: 0.8s !important;
+  background-color: #558b2f !important;
 }
 
 button.btn.waves-effect.waves-light:hover {
-    cursor: pointer;
-    background-color: #33691e !important;
+  cursor: pointer;
+  background-color: #33691e !important;
 }
 
 a.btn.waves-effect.waves-light.green.darken-4.hoverable {
-    transition: 0.8s !important;
-    background-color: #558b2f !important;
+  transition: 0.8s !important;
+  background-color: #558b2f !important;
 }
 
 a.btn.waves-effect.waves-light.green.darken-4.hoverable:hover {
-    cursor: pointer;
-    background-color: #33691e !important;
+  cursor: pointer;
+  background-color: #33691e !important;
 }
 
 a.waves-effect.waves-light.btn.modal-trigger.orange.accent-2.hoverable {
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 a.waves-effect.waves-light.btn.modal-trigger.orange.accent-2.hoverable:hover {
-    background-color: #ff9100 !important;
+  background-color: #ff9100 !important;
 }
 
 /* Style card dropdown list */
-.dropdown-content li>span {
-    color: #1b5e20;
+.dropdown-content li > span {
+  color: #1b5e20;
 }
- 
+
 /* Style cards */
 .card .card-action {
-    padding: 0.5em 1em;
+  padding: 0.5em 1em;
 }
 
 .card .card-content {
-    padding: 0.7em;
+  padding: 0.7em;
 }
 
-.quiz-rounds{
-    text-align: left;
+.quiz-rounds {
+  text-align: left;
 }
 
 /* Style modal contact form */
-.modal-rows{
-    margin-bottom: 0;
+.modal-rows {
+  margin-bottom: 0;
 }
 
 .input-field {
-    position: relative;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+  position: relative;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Style social links in footer */
 .social-links {
-    text-align: center;
-    padding-top: 0;
-    margin: 0;
+  text-align: center;
+  padding-top: 0;
+  margin: 0;
 }
 
 .social-links li a i {
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
-    padding: 8px;
-    font-size: 2em;
-    line-height: 1.5em;
-    text-align: center;
-    color: #ffab40;
-    transition: 0.5s;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: center;
+  color: #ffab40;
+  transition: 0.5s;
 }
 
-.social-links li a i:hover{
-    color: #ff9100;
+.social-links li a i:hover {
+  color: #ff9100;
 }
 
 .list-inline-item {
-    display: inline-flex;
-    padding: 5px;
+  display: inline-flex;
+  padding: 5px;
 }
-
-
-

@@ -1,12 +1,20 @@
 {% extends 'base.html' %} {% block content %}
 <!-- image of Website under construction (page work wip) with link for home page -->
 <div class="center-align heading-homepage">
-<h3 class="headings">Under Construction</h3>
-			<img src="../static/images/under_construction.png" alt="Website Under Construction" class="responsive img-border z-depth-4">
+  <h3 class="headings">Under Construction</h3>
+  <img
+    src="../static/images/under_construction.png"
+    alt="Website Under Construction"
+    class="responsive img-border z-depth-4"
+  />
 
-            <a class="btn waves-effect waves-light green darken-4 hoverable" href="{{url_for('get_questions')}}">Home Page</a>
+  <a
+    class="btn waves-effect waves-light green darken-4 hoverable"
+    href="{{url_for('get_questions')}}"
+    >Home Page</a
+  >
 </div>
-<br>
-<br>
+<br />
+<br />
 
 {% endblock %}
