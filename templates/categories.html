@@ -2,7 +2,12 @@
 
 <div class="center-align heading-homepage">
   <div>
-    <h4 class="headings">All Questions</h4>
+    <h4 class="headings">Your Chosen Category Questions</h4>
+  </div>
+  <div class="info">
+    Just click <i class="material-icons">expand_more</i> to reveal the answer<br>
+    Please only <a class="waves-effect waves-light btn btn_small red lighten-1 hoverable"
+            >Delete</a> if necessary
   </div>
 </div>
 <!-- Question and answers for each category -->
@@ -13,12 +18,12 @@
       <div class="collapsible-header">
         <div class="col s3">
           <a
-            href="{{url_for('delete_question', question_and_answer_id=question_and_answer._id)}}"
+            href="{{url_for('delete_question', question_and_answer_id=category._id)}}"
             class="waves-effect waves-light btn btn_small red lighten-1 hoverable"
             >Delete</a
           >
           <a
-            href="{{url_for('edit_question', question_and_answer_id=question_and_answer._id)}}"
+            href="{{url_for('edit_question', question_and_answer_id=category._id)}}"
             class="waves-effect waves-light btn btn_small orange accent-2 hoverable"
             >Edit</a
           >

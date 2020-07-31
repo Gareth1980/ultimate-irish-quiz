@@ -35,7 +35,7 @@ create questions, read questions, update questions and delete questions.
 <p>I contacted 3 of my friends that have a keen interest in quizzes and all things Irish.</p>
 
 <h3>Damien and Julie from Kingsbury</h3>
-<p>As a user, we want to test my knowledge on all things Irish and don't want to see the answer 
+<p>As a user, we want to test our knowledge on all things Irish and don't want to see the answer 
 before we have a guess and then be able to click to reveal the answer. We would like to be able 
 to add questions that are not there already, delete questions that are incorrect and update 
 questions that need updating.
