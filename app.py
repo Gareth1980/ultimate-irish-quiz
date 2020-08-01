@@ -17,17 +17,25 @@ app.config["MONGO_URI"] = MONGO_URI
 mongo = PyMongo(app)
 
 # Route for Home Page
+
+
 @app.route('/')
 @app.route('/get_questions')
 def get_questions():
-    return render_template("question_and_answer.html", question_and_answer=mongo.db.question_and_answer.find())
+    return render_template("question_and_answer.html",
+                           question_and_answer=mongo.db.question_and_answer.find())
 
 # Route to Add a Question
+
+
 @app.route('/add_question')
 def add_question():
-    return render_template('addquestion.html', categories=mongo.db.categories.find())
+    return render_template('addquestion.html',
+                           categories=mongo.db.categories.find())
 
 # Route to Insert Question
+
+
 @app.route('/insert_question', methods=['POST'])
 def insert_question():
     question_and_answer = mongo.db.question_and_answer
@@ -35,15 +43,20 @@ def insert_question():
     return redirect(url_for('get_questions'))
 
 # Route to Edit Question
+
+
 @app.route('/edit_question/<question_and_answer_id>')
 def edit_question(question_and_answer_id):
     the_question = mongo.db.question_and_answer.find_one(
         {"_id": ObjectId(question_and_answer_id)})
     all_categories = mongo.db.categories.find()
-    return render_template('editquestion.html', question_and_answer=the_question,
+    return render_template('editquestion.html',
+                           question_and_answer=the_question,
                            categories=all_categories)
 
 # Route to Update Question
+
+
 @app.route('/update_question/<question_and_answer_id>', methods=['POST'])
 def update_question(question_and_answer_id):
     question_and_answer = mongo.db.question_and_answer
@@ -56,6 +69,8 @@ def update_question(question_and_answer_id):
     return redirect(url_for('get_questions'))
 
 # Route to Delete Question
+
+
 @app.route('/delete_question/<question_and_answer_id>')
 def delete_question(question_and_answer_id):
     mongo.db.question_and_answer.remove(
@@ -63,16 +78,22 @@ def delete_question(question_and_answer_id):
     return redirect(url_for('get_questions'))
 
 # Route for Shop Link
+
+
 @app.route('/shop')
 def get_shop():
     return render_template("shop.html")
 
 # Route for Under Construction Link
+
+
 @app.route('/under_construction')
 def get_under_construction():
     return render_template("under_construction.html")
 
 # Route for General Knowledge category
+
+
 @app.route('/get_general_knowledge')
 def get_general_knowledge():
     question_and_answer = list(mongo.db.question_and_answer.find(
@@ -81,6 +102,8 @@ def get_general_knowledge():
                            question_and_answer=question_and_answer)
 
 # Route for Geography category
+
+
 @app.route('/get_geography')
 def get_geography():
     question_and_answer = list(
@@ -89,6 +112,8 @@ def get_geography():
                            question_and_answer=question_and_answer)
 
 # Route for History category
+
+
 @app.route('/get_history')
 def get_history():
     question_and_answer = list(
@@ -97,6 +122,8 @@ def get_history():
                            question_and_answer=question_and_answer)
 
 # Route for Music category
+
+
 @app.route('/get_music')
 def get_music():
     question_and_answer = list(
@@ -105,6 +132,8 @@ def get_music():
                            question_and_answer=question_and_answer)
 
 # Route for Politics category
+
+
 @app.route('/get_politics')
 def get_politics():
     question_and_answer = list(
@@ -113,6 +142,8 @@ def get_politics():
                            question_and_answer=question_and_answer)
 
 # Route for Sports category
+
+
 @app.route('/get_sport')
 def get_sport():
     question_and_answer = list(
@@ -121,12 +152,15 @@ def get_sport():
                            question_and_answer=question_and_answer)
 
 # Route for TV and Film category
+
+
 @app.route('/get_tv_and_film')
 def get_tv_and_film():
     question_and_answer = list(mongo.db.question_and_answer.find({
                                'category_name': 'TV and Film'}))
     return render_template("categories.html",
                            question_and_answer=question_and_answer)
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
