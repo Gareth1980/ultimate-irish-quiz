@@ -234,12 +234,14 @@ All links in footer in all pages are tested and working correctly
 * Dropdown for category is tested and working correctly
 * Question and answer fields are tested and working correctly
 * Link to add question is tested and working correctly
+* If question, answer or both fields are left blank, question will not be added is tested and working correctly 
 
 **Edit a Question Page**
 
 * Dropdown for category is tested and working correctly
 * Question and answer fields are tested and working correctly
 * Link to edit question is tested and working correctly
+* If question, answer or both fields are left blank, question will not be added is tested and working correctly
 
 **Categories Page**
 

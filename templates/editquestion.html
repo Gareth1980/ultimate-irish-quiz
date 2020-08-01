@@ -27,7 +27,12 @@
     <div class="row">
       <div class="input-field col s12">
         <i class="material-icons prefix">mode_edit</i>
-        <textarea name="question" id="question" class="materialize-textarea">
+        <textarea
+          name="question"
+          id="question"
+          class="materialize-textarea"
+          required
+        >
 {{ question_and_answer.question}}</textarea
         >
         <label>Edit Question</label>
@@ -37,7 +42,7 @@
     <div class="row">
       <div class="input-field col s12">
         <i class="material-icons prefix">mode_edit</i>
-        <textarea name="answer" id="answer" class="materialize-textarea">
+        <textarea name="answer" id="answer" class="materialize-textarea" required>
 {{ question_and_answer.answer}}</textarea
         >
         <label>Edit Answer</label>
